@@ -38,4 +38,14 @@ exports.updateUrl = async (req, res) => {
 
   res.status(200).json(entry);
 };
+// DELETE: Delete URL
+exports.deleteUrl = async (req, res) => {
+  const { code } = req.params;
+  const result = await Url.findOneAndDelete({ shortCode: code });
+
+  if (!result) return res.status(404).json({ message: 'Not found' });
+
+  res.sendStatus(204);
+};
+
 
