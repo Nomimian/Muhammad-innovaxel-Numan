@@ -47,5 +47,15 @@ exports.deleteUrl = async (req, res) => {
 
   res.sendStatus(204);
 };
+// GET: Statistics
+exports.getStats = async (req, res) => {
+  const { code } = req.params;
+  const entry = await Url.findOne({ shortCode: code });
+
+  if (!entry) return res.status(404).json({ message: 'Not found' });
+
+  res.status(200).json(entry);
+};
+
 
 
