@@ -24,4 +24,18 @@ exports.getOriginalUrl = async (req, res) => {
 
   res.status(200).json(entry);
 };
+// PUT: Update URL
+exports.updateUrl = async (req, res) => {
+  const { code } = req.params;
+  const { url } = req.body;
+  const entry = await Url.findOne({ shortCode: code });
+
+  if (!entry) return res.status(404).json({ message: 'Not found' });
+
+  entry.url = url;
+  entry.updatedAt = Date.now();
+  await entry.save();
+
+  res.status(200).json(entry);
+};
 
