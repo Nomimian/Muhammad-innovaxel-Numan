@@ -12,4 +12,16 @@ exports.createUrl = async (req, res) => {
 
   res.status(201).json(newUrl);
 };
+// GET: Retrieve original URL
+exports.getOriginalUrl = async (req, res) => {
+  const { code } = req.params;
+  const entry = await Url.findOne({ shortCode: code });
+
+  if (!entry) return res.status(404).json({ message: 'Not found' });
+
+  entry.accessCount += 1;
+  await entry.save();
+
+  res.status(200).json(entry);
+};
 
