@@ -1,0 +1,145 @@
+{
+	"info": {
+		"_postman_id": "5ab26fb9-ac5f-497d-9cd4-87857410b1ab",
+		"name": "Url-shortner",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "46702596",
+		"_collection_link": "https://muhammadnuman-6636501.postman.co/workspace/Muhammad-Numan's-Workspace~adcb65cf-6070-4d7d-810c-401038d6915a/collection/46702596-5ab26fb9-ac5f-497d-9cd4-87857410b1ab?action=share&source=collection_link&creator=46702596"
+	},
+	"item": [
+		{
+			"name": "New Request",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/api/shorten/acfa80",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"shorten",
+						"acfa80"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "New Request",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"url\": \"https://www.google.com/search?q=mern+stack+tutorial\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/shorten",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"shorten"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "New Request",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"url\": \"https://www.youtube.com/watch?v=dQw4w9WgXcQ\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/shorten/acfa80",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"shorten",
+						"acfa80"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "New Request",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"url\": \"https://www.youtube.com/watch?v=dQw4w9WgXcQ\"\r\n}\r\n"
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/shorten/acfa80",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"shorten",
+						"acfa80"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "New Request",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"url\": \"https://www.youtube.com/watch?v=dQw4w9WgXcQ\"\r\n}\r\n"
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/shorten/stats/06c7d1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"shorten",
+						"stats",
+						"06c7d1"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
